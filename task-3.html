@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="/index.html">Go home</a>
+
+      <p class="task-title">Task 3</p>
+      <form class="contact-form js-contact-form">
+        <input
+          name="userName"
+          type="text"
+          class="contact-form-input js-username-input"
+          data-length="8"
+          placeholder="Your name"
+        />
+        <label class="js-policy-label">
+          <input
+            type="checkbox"
+            name="accept"
+            class="contact-form-checkbox js-policy-checkbox"
+          />
+          Я <span class="js-username-output">Anonymous</span> погоджуюсь із
+          політикою конфіденційності
+        </label>
+        <button type="submit" class="contact-form-btn js-contact-form-submit">
+          Відправити
+        </button>
+      </form>
+    </div>
+
+    <script type="module" src="/js/task-3.js"></script>
+  </body>
+</html>
