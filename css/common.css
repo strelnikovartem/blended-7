@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -41,9 +47,61 @@ ul {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
+  /* width: 1440px; */
   margin: 0 auto;
   padding: 0px 40px;
+}
+
+.container-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.black {
+  background-color: black;
+}
+
+.box-red {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-green {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+
+.box-black {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
 }
 
 .module-title {
