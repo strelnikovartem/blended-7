@@ -45,5 +45,7 @@ function handleClick(event) {
   if (event.target === event.currentTarget) {
     return;
   }
-  console.log(event.target);
+  const currentProdukt = event.target.closest(".product-item");
+  const id = currentProdukt.dataset.id;
+  console.log(id);
 }
