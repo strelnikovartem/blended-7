@@ -31,21 +31,16 @@ function createMarkup(arr) {
   return arr
     .map(
       (item) => `
-     <li data-id="${item.id}" class="item product-item">
-        <img src="${item.img}" alt="${item.name}" width='300'>
-        <h2>${item.name}</h2>
-        <p>Coast: ${item.price} $</p>
+      <li class="item product=item">
+      <img src="${item.img}" alt="${item.name}" >
+      <h2>${item.name}</h2>
+      <p>Coast: ${item.price} $</p>
     </li>
-    `
+  `
     )
     .join("");
 }
 
 function handleClick(event) {
-  if (event.target === event.currentTarget) {
-    return;
-  }
-  const currentProdukt = event.target.closest(".product-item");
-  const id = currentProdukt.dataset.id;
-  console.log(id);
+  console.log(event.target);
 }
