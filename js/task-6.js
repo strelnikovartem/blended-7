@@ -31,7 +31,7 @@ function createMarkup(arr) {
   return arr
     .map(
       (item) => `
-      <li data-id="${item.id}" class="item product=item">
+      <li data-id="${item.id}" class="item product-item">
       <img src="${item.img}" alt="${item.name}" >
       <h2>${item.name}</h2>
       <p>Coast: ${item.price} $</p>
@@ -45,4 +45,18 @@ function handleClick(event) {
   if (event.target === event.currentTarget) {
     return;
   }
+
+  const currentProduct = event.target.closest(".product-item");
+  const id = currentProduct.dataset.id;
+  const product = products.find((item) => item.id === +id);
+
+  const instance = basicLightbox.create(`
+	<div class="modal">
+  <img src="${product.img}" alt="${product.name}"/>
+  <h2>${product.name}</h2>
+  <h3>Coast: ${product.price} $</h3>
+  <p>${product.description}</p>
+  </div>
+`);
+  instance.show();
 }
