@@ -31,7 +31,7 @@ function createMarkup(arr) {
   return arr
     .map(
       (item) => `
-      <li class="item product=item">
+      <li data-id="${item.id}" class="item product=item">
       <img src="${item.img}" alt="${item.name}" >
       <h2>${item.name}</h2>
       <p>Coast: ${item.price} $</p>
@@ -42,5 +42,7 @@ function createMarkup(arr) {
 }
 
 function handleClick(event) {
-  console.log(event.target);
+  if (event.target === event.currentTarget) {
+    return;
+  }
 }
